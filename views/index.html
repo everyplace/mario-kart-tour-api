@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Let's do some crime... err research!</title>
+    <meta name="description" content="A cool scraper made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <h1>
+      Mario Kart Tour Api
+    </h1>
+    <h2>
+      Rankings Brute Force Scraper
+    </h2>
+    <p>
+      <a href="https://mariokarttour.com/en-US/ranking/allcup">Mario Kart Tour</a> is a great game,
+      and has a global leaderboard. Unfortunately, they've made some great performance choices, and 
+      embedded the data that powers the leaderboard directly in the html page! This means that, for 
+      those of us that like data, it needs to be freed from the confines of the data attribute that it
+      hides behind.
+    </p>
+    <p>
+      This project is about the simplest way possible to grab this data from the html using `cheerio`,
+      and spit it out as a cors-accessible json endpoint.
+    </p>
+    <p>
+      With love, <br><a href="https://erinsparling.glitch.me">-erin</a>
+    </p>
+    <form action="/api" method="get">
+
+      <select name="language">
+        <option value="en-US">English</option>
+      </select>
+      
+      <select name="cup">
+        <option value="allcup">All Cups</option>
+      </select>
+          
+      <input type="submit" name="submit" value="Get Rankings" />
+      <small>Note: Yes, these form elements are superfluous. But who knows, maybe they'll be useful some day?</small>
+    </form>
+
+  </body>
+</html>
